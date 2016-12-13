@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSEBuildings.UI", "HSEBuildings.UI\HSEBuildings.UI.csproj", "{05F34CAC-1483-4FBB-8A91-B24BE04E66BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSEBuildings.Data", "HSEBuildings.Data\HSEBuildings.Data.csproj", "{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{05F34CAC-1483-4FBB-8A91-B24BE04E66BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05F34CAC-1483-4FBB-8A91-B24BE04E66BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F34CAC-1483-4FBB-8A91-B24BE04E66BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
