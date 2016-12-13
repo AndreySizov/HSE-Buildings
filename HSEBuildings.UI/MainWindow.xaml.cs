@@ -23,6 +23,9 @@ namespace HSEBuildings.UI
         public MainWindow()
         {
             InitializeComponent();
+            var form = new Map();
+            form.ShowDialog();
+            Close();
         }
     }
 }
