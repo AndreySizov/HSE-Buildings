@@ -53,9 +53,19 @@ namespace HSEBuildings.UI
         }
         public GMapMarker CreateNewMarker(PointLatLng coordinates,string text,string tag)
         {
-            GMarkerGoogle marker = new GMarkerGoogle(coordinates, GMarkerGoogleType.red);
+            Bitmap newImage = new Bitmap(Properties.Resources.placeholder.Height/3, Properties.Resources.placeholder.Width/3);
+            using (Graphics gr = Graphics.FromImage(newImage))
+            {
+                gr.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                gr.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                gr.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                gr.DrawImage(Properties.Resources.placeholder, new Rectangle(0, 0, Properties.Resources.placeholder.Height / 3, Properties.Resources.placeholder.Width / 3));
+            }
+            GMarkerGoogle marker = new GMarkerGoogle(coordinates, newImage);
             marker.ToolTip = new GMap.NET.WindowsForms.ToolTips.GMapRoundedToolTip(marker);
             marker.ToolTipText = text;
+            marker.ToolTip.TextPadding = new Size(20,10);
+            marker.ToolTip.Font = new Font("Arial", 10.0f);
             marker.Tag = tag;
             return marker;
         }
