@@ -69,5 +69,12 @@ namespace HSEBuildings.UI
             marker.Tag = tag;
             return marker;
         }
+
+        private void gMapControl1_OnMarkerClick(GMapMarker item, MouseEventArgs e)
+        {
+            var view = new InfoWindow();
+            view.ShowDialog();
+            
+        }
     }
 }
