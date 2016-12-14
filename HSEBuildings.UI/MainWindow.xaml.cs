@@ -20,12 +20,23 @@ namespace HSEBuildings.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            System.Timers.Timer t = new System.Timers.Timer(); 
+            t.Interval = 2000;
+            t.Start();
+            t.AutoReset = false;
+            t.Elapsed += new System.Timers.ElapsedEventHandler(timer_Tick);
+            
+
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
             var form = new Map();
             form.ShowDialog();
-            Close();
+
         }
     }
 }
