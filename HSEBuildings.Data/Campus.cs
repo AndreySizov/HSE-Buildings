@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HSEBuildings.Data
 {
-    public class Floor
+    public class Campus
     {
         public int Id { get; set; }
-        public int Number { get; set; }
-        public Campus Campus { get; set; }
-        
+        public string Name { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
