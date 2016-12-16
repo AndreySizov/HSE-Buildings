@@ -14,6 +14,24 @@ namespace HSEBuildings.Data.Migrations
 
         protected override void Seed(HSEBuildings.Data.Context context)
         {
+            Repository repo = new Repository();
+            repo.GetData();
+            foreach (var item in repo.Campuses)
+            {
+                context.Campus.AddOrUpdate(camp => camp.Name);
+            }
+            foreach (var item in repo.Flors)
+            {
+                context.Flor.AddOrUpdate(flor => flor.Number);
+            }
+            foreach (var item in repo.Rooms)
+            {
+                context.Room.AddOrUpdate(room => room.Name);
+            }
+            foreach (var item in repo.Photos)
+            {
+                context.Photo.AddOrUpdate(photo => photo.Link);
+            }
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

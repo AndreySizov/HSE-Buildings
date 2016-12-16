@@ -1,18 +1,19 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HSEBuildings.Data
 {
-    class Repository
+    public class Repository
     {
         private class DataSet
         {
             public List<Campus> Campuses { get; set; }
-            public List<Floor> Floors { get; set; }
+            public List<Flor> Flors { get; set; }
             public List<Room> Rooms { get; set; }
             public List<Photo> Photos { get; set; }
         }
@@ -28,11 +29,11 @@ namespace HSEBuildings.Data
 
         }
 
-        public IEnumerable<Floor> Floors
+        public IEnumerable<Flor> Flors
         {
             get
             {
-                return _dataset.Floors;
+                return _dataset.Flors;
             }
 
         }
@@ -58,8 +59,8 @@ namespace HSEBuildings.Data
 
         public void GetData()
         {
-            //Here will be JsonConveration file
-            //_dataset = JsonConvert.DeserializeObject<>(File.ReadAllText("AllYearsStats.Json"));
+            
+            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("../../../HSEBuildings.Data/Buildings.Json"));
         }
     }
 }

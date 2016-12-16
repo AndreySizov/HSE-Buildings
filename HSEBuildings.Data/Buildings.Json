@@ -1,0 +1,162 @@
+﻿{
+  "campuses": 
+  [
+    {
+      "Id": 1,
+      "Name": "Kirpichnaya",
+      "Latitude":55.778651,
+      "Longitude":37.733001 
+    },
+    {
+      "Id": 2,
+      "Name": "Shabolovskaya",
+      "Latitude":55.720181,
+      "Longitude":37.608234 
+    },
+    {
+      "Id": 3,
+      "Name": "MIEM-Strogino",
+      "Latitude":55.803296,
+      "Longitude":37.409504
+    }
+  ],
+  "Flors": [
+    {
+      "Id": 1,
+      "Number": 1,
+      "CampusId": 1
+    },
+    {
+      "Id": 2,
+      "Number": 2,
+      "CampusId": 1
+    },
+    {
+      "Id": 3,
+      "Number": 3,
+      "CampusId": 1
+    },
+    {
+      "Id": 4,
+      "Number": 4,
+      "CampusId": 1
+    },
+    {
+      "Id": 5,
+      "Number": 5,
+      "CampusId": 1
+    },
+    {
+      "Id": 5,
+      "Number": 5,
+      "CampusId": 1
+    },
+    {
+      "Id": 6,
+      "Number": 6,
+      "CampusId": 1
+    },
+    {
+      "Id": 7,
+      "Number": 7,
+      "CampusId": 1
+    },
+    {
+      "Id": 8,
+      "Number": 8,
+      "CampusId": 1
+    },
+    {
+      "Id": 9,
+      "Number": 9,
+      "CampusId": 1
+    }
+  ],
+  "rooms": [
+    {
+      "Id": 1,
+      "Name": "101",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+      "Id": 2,
+      "Name": "102",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+      "Id": 3,
+      "Name": "103",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+      "Id": 4,
+      "Name": "101",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+      "Id": 5,
+      "Name": "201",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 6,
+      "Name": "202",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 7,
+      "Name": "203",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 8,
+      "Name": "204",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 9,
+      "Name": "205",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 10,
+      "Name": "206",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 11,
+      "Name": "207",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 12,
+      "Name": "208",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 13,
+      "Name": "210",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+      "Id": 14,
+      "Name": "211",
+      "Side": true,
+      "FlorId": 2
+    }
+  ],
+  "photos": []
+}

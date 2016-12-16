@@ -55,10 +55,14 @@
   <ItemGroup>
     <Compile Include="Campus.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="Floor.cs" />
+    <Compile Include="Flor.cs" />
     <Compile Include="Migrations\201612142002344_Initial.cs" />
     <Compile Include="Migrations\201612142002344_Initial.Designer.cs">
       <DependentUpon>201612142002344_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612162145220_Second.cs" />
+    <Compile Include="Migrations\201612162145220_Second.Designer.cs">
+      <DependentUpon>201612162145220_Second.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Photo.cs" />
@@ -67,7 +71,11 @@
     <Compile Include="Room.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612162145220_Second.resx">
+      <DependentUpon>201612162145220_Second.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
+    <EmbeddedResource Include="Buildings.Json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
