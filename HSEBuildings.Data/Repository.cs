@@ -55,12 +55,16 @@ namespace HSEBuildings.Data
             }
 
         }
+        public Repository()
+        {
+            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("../../../HSEBuildings.Data/Buildings.Json"));
+        }
 
 
         public void GetData()
         {
             
-            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("../../../HSEBuildings.Data/Buildings.Json"));
+            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("HSEBuildings.Data/Buildings.Json"));
         }
     }
 }

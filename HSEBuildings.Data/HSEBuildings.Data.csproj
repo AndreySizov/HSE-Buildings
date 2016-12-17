@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201612162145220_Second.Designer.cs">
       <DependentUpon>201612162145220_Second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612171359090_third.cs" />
+    <Compile Include="Migrations\201612171359090_third.Designer.cs">
+      <DependentUpon>201612171359090_third.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612162145220_Second.resx">
       <DependentUpon>201612162145220_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612171359090_third.resx">
+      <DependentUpon>201612171359090_third.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EmbeddedResource Include="Buildings.Json" />
