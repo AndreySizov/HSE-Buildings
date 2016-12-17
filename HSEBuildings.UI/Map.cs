@@ -18,6 +18,7 @@ namespace HSEBuildings.UI
         public Map()
         {
             InitializeComponent();
+            
         }
 
         private void Map_Load(object sender, EventArgs e)

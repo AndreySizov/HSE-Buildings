@@ -34,9 +34,12 @@ namespace HSEBuildings.UI
         }
         void timer_Tick(object sender, EventArgs e)
         {
+            Dispatcher.BeginInvoke(new Action(delegate { Hide(); }));
             var form = new Map();
-            form.ShowDialog();
-
+            form.Show();
+            //Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+            //Dispatcher.BeginInvoke(new Action(delegate { Close(); }));
         }
+
     }
 }
