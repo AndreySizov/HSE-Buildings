@@ -68,11 +68,28 @@
     <Compile Include="Migrations\201612171359090_third.Designer.cs">
       <DependentUpon>201612171359090_third.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612171642005_Forth.cs" />
+    <Compile Include="Migrations\201612171642005_Forth.Designer.cs">
+      <DependentUpon>201612171642005_Forth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612171643214_DownToThird.cs" />
+    <Compile Include="Migrations\201612171643214_DownToThird.Designer.cs">
+      <DependentUpon>201612171643214_DownToThird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612172248177_NewSchema.cs" />
+    <Compile Include="Migrations\201612172248177_NewSchema.Designer.cs">
+      <DependentUpon>201612172248177_NewSchema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Photo.cs" />
+    <Compile Include="PhotoSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="ResponseTemplates\Location.cs" />
+    <Compile Include="ResponseTemplates\RoomWay.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="Side.cs" />
+    <Compile Include="SideFlor.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612162145220_Second.resx">
@@ -80,6 +97,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612171359090_third.resx">
       <DependentUpon>201612171359090_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612171642005_Forth.resx">
+      <DependentUpon>201612171642005_Forth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612171643214_DownToThird.resx">
+      <DependentUpon>201612171643214_DownToThird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612172248177_NewSchema.resx">
+      <DependentUpon>201612172248177_NewSchema.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EmbeddedResource Include="Buildings.Json" />

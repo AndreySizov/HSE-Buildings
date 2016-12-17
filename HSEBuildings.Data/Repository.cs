@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HSEBuildings.Data.ResponseTemplates;
 
 namespace HSEBuildings.Data
 {
@@ -55,17 +56,27 @@ namespace HSEBuildings.Data
             }
 
         }
-        public Repository()
-        {
-            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("../../../HSEBuildings.Data/Buildings.Json"));
-        }
-
 
         public void GetData()
         {
             
             _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("HSEBuildings.Data/Buildings.Json"));
         }
+
+        public IEnumerable<Location> getLocation(string name)
+        {
+            using (var c = new Context())
+                return from item in c.Campus
+                       where item.Name == name
+                       select new Location { Latitude=item.Latitude, Longitude=item.Longitude };
+        }
+
+        //public IEnumerable<RoomWay> getPhotos(string roomName)
+        //{
+        //    using (var c = new Context())
+        //        return from item in c.Room
+        //               where item.Name
+        //}
     }
 }
 
