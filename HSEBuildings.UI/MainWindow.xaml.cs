@@ -27,10 +27,12 @@ namespace HSEBuildings.UI
             Repository repo = new Repository();
             
             using (var c = new Context()) {
+                //c.Campus.ToList();
                 c.Campus.AddRange(repo.Campuses);
                 c.Flor.AddRange(repo.Flors);
                 c.Room.AddRange(repo.Rooms);
                 c.Photo.AddRange(repo.Photos);
+                c.SaveChanges();
             }
             InitializeComponent();
             System.Timers.Timer t = new System.Timers.Timer(); 
@@ -43,9 +45,9 @@ namespace HSEBuildings.UI
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            Dispatcher.BeginInvoke(new Action(delegate { Hide(); }));
-            var form = new Map();
-            form.Show();
+            //Dispatcher.BeginInvoke(new Action(delegate { Hide(); }));
+            //var form = new Map();
+            //form.Show();
             //Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
             //Dispatcher.BeginInvoke(new Action(delegate { Close(); }));
         }
