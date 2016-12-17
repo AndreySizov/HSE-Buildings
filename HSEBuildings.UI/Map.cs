@@ -19,10 +19,12 @@ namespace HSEBuildings.UI
         {
             InitializeComponent();
             
+            
         }
 
         private void Map_Load(object sender, EventArgs e)
         {
+            
             gMapControl1.Bearing = 0;
             gMapControl1.CanDragMap = true;
             gMapControl1.DragButton = MouseButtons.Left;
