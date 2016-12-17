@@ -17,6 +17,9 @@ namespace HSEBuildings.Data
             public List<Flor> Flors { get; set; }
             public List<Room> Rooms { get; set; }
             public List<Photo> Photos { get; set; }
+            public List<Side> Sides { get; set; }
+            public List<SideFlor> SideFlors { get; set; }
+            public List<PhotoSet> PhotoSets { get; set; }
         }
 
         DataSet _dataset;
@@ -53,6 +56,33 @@ namespace HSEBuildings.Data
             get
             {
                 return _dataset.Photos;
+            }
+
+        }
+
+        public IEnumerable<PhotoSet> PhotoSets
+        {
+            get
+            {
+                return _dataset.PhotoSets;
+            }
+
+        }
+
+        public IEnumerable<Side> Sides
+        {
+            get
+            {
+                return _dataset.Sides;
+            }
+
+        }
+
+        public IEnumerable<SideFlor> SideFlors
+        {
+            get
+            {
+                return _dataset.SideFlors;
             }
 
         }

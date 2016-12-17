@@ -1,23 +1,43 @@
 ﻿{
-  "campuses": 
-  [
+  "campuses": [
     {
       "Id": 1,
       "Name": "Kirpichnaya",
-      "Latitude":55.778651,
-      "Longitude":37.733001 
+      "Latitude": 55.778651,
+      "Longitude": 37.733001,
+      "CampusPhoto": "test1"
     },
     {
       "Id": 2,
       "Name": "Shabolovskaya",
-      "Latitude":55.720181,
-      "Longitude":37.608234 
+      "Latitude": 55.720181,
+      "Longitude": 37.608234,
+      "CampusPhoto": "test1"
     },
     {
       "Id": 3,
       "Name": "MIEM-Strogino",
-      "Latitude":55.803296,
-      "Longitude":37.409504
+      "Latitude": 55.803296,
+      "Longitude": 37.409504,
+      "CampusPhoto": "test1"
+    }
+  ],
+  "sides": [
+    {
+      "Id": 1,
+      "Name": "leftTop"
+    },
+    {
+      "Id": 2,
+      "Name": "leftBot"
+    },
+    {
+      "Id": 3,
+      "Name": "rightTop"
+    },
+    {
+      "Id": 4,
+      "Name": "rightTop"
     }
   ],
   "Flors": [
@@ -67,91 +87,124 @@
       "CampusId": 1
     }
   ],
+  "sideflors": [
+    {
+      "Id": 1,
+      "SideId": 1,
+      "FlorId": 1,
+      "PhotoSetNum": 1
+    },
+    {
+      "Id": 2,
+      "SideId": 2,
+      "FlorId": 1,
+      "PhotoSetNum": 2
+    },
+    {
+      "Id": 3,
+      "SideId": 3,
+      "FlorId": 1,
+      "PhotoSetNum": 3
+    },
+    {
+      "Id": 4,
+      "SideId": 4,
+      "FlorId": 1,
+      "PhotoSetNum": 4
+    }
+  ],
   "rooms": [
     {
       "Id": 1,
       "Name": "101",
-      "Side": true,
-      "FlorId": 1
+      "SideFlorId": 1
     },
     {
       "Id": 2,
       "Name": "102",
-      "Side": true,
-      "FlorId": 1
+      "SideFlorId": 2
     },
     {
       "Id": 3,
       "Name": "103",
-      "Side": true,
-      "FlorId": 1
+      "SideFlorId": 3
     },
     {
       "Id": 4,
-      "Name": "101",
-      "Side": true,
-      "FlorId": 1
+      "Name": "104",
+      "SideFlorId": 4
     },
     {
       "Id": 5,
       "Name": "201",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 1
     },
     {
       "Id": 6,
       "Name": "202",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 1
     },
     {
       "Id": 7,
       "Name": "203",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 1
     },
     {
       "Id": 8,
       "Name": "204",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 9,
       "Name": "205",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 10,
       "Name": "206",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 11,
       "Name": "207",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 12,
       "Name": "208",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 13,
       "Name": "210",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 3
     },
     {
       "Id": 14,
       "Name": "211",
-      "Side": true,
-      "FlorId": 2
+      "SideFlorId": 4
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "Id": 1,
+      "Link": "test1"
+    },
+    {
+      "Id": 2,
+      "Link": "test2"
+    }
+  ],
+  "photosets": [
+    {
+      "Id": 1,
+      "PhotoId": 1,
+      "PhotoSetNum": 1
+    },
+    {
+      "Id": 2,
+      "PhotoId": 2,
+      "PhotoSetNum": 1
+    }
+  ]
 }
