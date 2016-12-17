@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HSEBuildings.Data
 {
-    public class Floor
+    public class Flor
     {
         public int Id { get; set; }
         public int Number { get; set; }
         public Campus Campus { get; set; }
+        public int CampusId { get; set; }
         
     }
 }

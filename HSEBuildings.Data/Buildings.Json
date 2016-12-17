@@ -1,0 +1,162 @@
+﻿{
+  "campuses": 
+  [
+    {
+
+      "Name": "Kirpichnaya",
+      "Latitude":55.778651,
+      "Longitude":37.733001 
+    },
+    {
+
+      "Name": "Shabolovskaya",
+      "Latitude":55.720181,
+      "Longitude":37.608234 
+    },
+    {
+
+      "Name": "MIEM-Strogino",
+      "Latitude":55.803296,
+      "Longitude":37.409504
+    }
+  ],
+  "Flors": [
+    {
+
+      "Number": 1,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 2,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 3,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 4,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 5,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 5,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 6,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 7,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 8,
+      "CampusId": 1
+    },
+    {
+
+      "Number": 9,
+      "CampusId": 1
+    }
+  ],
+  "rooms": [
+    {
+
+      "Name": "101",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+
+      "Name": "102",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+
+      "Name": "103",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+
+      "Name": "101",
+      "Side": true,
+      "FlorId": 1
+    },
+    {
+
+      "Name": "201",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "202",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "203",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "204",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "205",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "206",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "207",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "208",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "210",
+      "Side": true,
+      "FlorId": 2
+    },
+    {
+
+      "Name": "211",
+      "Side": true,
+      "FlorId": 2
+    }
+  ],
+  "photos": []
+}

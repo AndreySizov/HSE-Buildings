@@ -11,7 +11,8 @@ namespace HSEBuildings.Data
         public int Id { get; set; }
         public string Name { get; set; }
         public bool Side { get; set; }
-        public Floor Floor { get; set; }
-        public List<Photo> Photos { get; set; }
+        public Flor Flor { get; set; }
+        public int FlorId { get; set; }
+        
     }
 }

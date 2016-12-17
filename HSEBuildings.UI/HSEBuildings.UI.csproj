@@ -134,6 +134,12 @@
   <ItemGroup>
     <None Include="Resources\placeholder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HSEBuildings.Data\HSEBuildings.Data.csproj">
+      <Project>{5B5F7E45-3CB1-4F4D-B2D5-A14268DC7633}</Project>
+      <Name>HSEBuildings.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
