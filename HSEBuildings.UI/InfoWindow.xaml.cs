@@ -77,11 +77,12 @@ namespace HSEBuildings.UI
             {
                 g = textBox.Text;
                 Repository repo = new Repository();
+                var res1 = repo.getSection(g);
                 var res2 = repo.getPhotoSet(g);
-                if (res2.Count != 0)
+                if ((res2.Count != 0)&&(res1.Count!=0))
                 {
                     Close();
-                    SimpleWindow sw = new SimpleWindow(res2);
+                    SimpleWindow sw = new SimpleWindow(res2,res1);
                     sw.ShowDialog();
                 }
                 else
@@ -94,11 +95,12 @@ namespace HSEBuildings.UI
                 g = comboBox.SelectedItem.ToString();
                 
                 Repository repo = new Repository();
+                var res1 = repo.getSection(g);
                 var res2 = repo.getPhotoSet(g);
-                if (res2.Count != 0)
+                if ((res2.Count != 0) && (res1.Count != 0))
                 {
                     Close();
-                    SimpleWindow sw = new SimpleWindow(res2);
+                    SimpleWindow sw = new SimpleWindow(res2,res1);
                     sw.ShowDialog();
                 }else
                 {

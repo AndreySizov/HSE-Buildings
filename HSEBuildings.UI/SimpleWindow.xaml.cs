@@ -25,11 +25,21 @@ namespace HSEBuildings.UI
     {
         int i;
         List<RoomWay> list;
-        public SimpleWindow(List<RoomWay> spisok)
+        List<Data.ResponseTemplates.Section> section;
+        bool b;
+        public SimpleWindow(List<RoomWay> spisok,List<Data.ResponseTemplates.Section> sect)
         {
             InitializeComponent();
             //i = spisok.Count();
             list = spisok;
+            section = sect;
+            if(list.TrueForAll(x=> x.link != "1 1.jpg"))
+            {
+                b = false;
+            }else
+            {
+                b = true;
+            }
             image.Source = new BitmapImage(new Uri(String.Format("Resources/{0}",list[0].link), UriKind.Relative));
             i = 1;
         }
@@ -39,6 +49,34 @@ namespace HSEBuildings.UI
             if (i == list.Count - 1)
             {
                 button.Content = "Конец!";
+                if (b)
+                {
+                    if((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
+                    {
+                        MessageBox.Show("Если Вы выбрали левые лифты, то поверните направо. Если Вы выбрали правые лифты, то поверните налево.");
+                    }
+                    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
+                    {
+                        MessageBox.Show("Если Вы выбрали левые лифты, то поверните налево. Если Вы выбрали правые лифты, то поверните направо.");
+                    }
+                }else
+                {
+                    if ((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
+                    {
+                        MessageBox.Show("Поверните налево.");
+                    }
+                    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
+                    {
+                        MessageBox.Show("Поверните направо.");
+                    }
+                }
+
+            }
+            if ((i == 3)&&b)
+            {
+                    MessageBox.Show("Выберите сторону лифтов: левая или правая");
+
+                
             }
             if (i < list.Count)
             {

@@ -8,7 +8,7 @@
         Title="SimpleWindow" WindowState="Maximized" SizeToContent="WidthAndHeight" d:DesignHeight="163.412">
     <Grid>
         <Image x:Name="image" Stretch="Uniform" />
-        <Button x:Name="button" Content="Далее" HorizontalAlignment="Center" Margin="44,21,0,0"  Width="170" Height="25" VerticalAlignment="Bottom" Click="button_Click"/>
+        <Button x:Name="button" Content="Далее" HorizontalAlignment="Center" Margin="44,21,0,0"  Width="270" Height="40" VerticalAlignment="Bottom" Click="button_Click"/>
 
     </Grid>
 </Window>
