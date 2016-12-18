@@ -28,7 +28,7 @@ namespace HSEBuildings.UI
         }
         void dBConnection()
         {
-            image.Source = new BitmapImage(new Uri("Resources/placeholder.png", UriKind.Relative));
+            //image.Source = new BitmapImage(new Uri("Resources/placeholder.png", UriKind.Relative));
             comboBox.Items.Add("Библиотека");
             comboBox.Items.Add("Столовая");
             comboBox.Items.Add("Диспетчерская");
@@ -40,6 +40,7 @@ namespace HSEBuildings.UI
             if (checkBox.IsChecked == true)
             {
                 textBox.IsEnabled = true;
+                
             }else
             {
                 textBox.IsEnabled = false;
