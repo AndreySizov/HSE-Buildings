@@ -124,7 +124,7 @@ namespace HSEBuildings.Data
                         select new Location { Name = item.Name, Latitude = item.Latitude, Longitude = item.Longitude, CampusPhoto = item.CampusPhoto }).ToList();
         }
 
-        public List<Section> getSection()
+        public List<Section> getSection(string roomName)
         {
             using (var c = new Context())
                 return (from item in c.Room
@@ -132,6 +132,7 @@ namespace HSEBuildings.Data
                         on item.SideFlorId equals sf.Id
                         join side in c.Side
                         on sf.SideId equals side.Id
+                        where item.Name == roomName
                         select new Section { DirectionId = side.Id }).ToList();
         }
     }
