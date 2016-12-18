@@ -75,6 +75,7 @@ namespace HSEBuildings.UI
             GMarkerGoogle marker = new GMarkerGoogle(coordinates, newImage);
             marker.ToolTip = new GMap.NET.WindowsForms.ToolTips.GMapRoundedToolTip(marker);
             marker.ToolTipText = text;
+            marker.Tag = text;
             marker.ToolTip.TextPadding = new Size(20,10);
             marker.ToolTip.Font = new Font("Arial", 10.0f);
             return marker;
@@ -82,8 +83,14 @@ namespace HSEBuildings.UI
 
         private void gMapControl1_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
-            var view = new InfoWindow();
-            view.ShowDialog();
+            if(item.Tag.Equals("Кирпичная, 33"))
+            {
+                var view = new InfoWindow();
+                view.ShowDialog();
+            }else
+            {
+                MessageBox.Show("Это здание пока не доступно");
+            }
             
         }
     }
