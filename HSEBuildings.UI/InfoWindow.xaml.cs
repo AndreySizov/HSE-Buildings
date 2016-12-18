@@ -22,6 +22,52 @@ namespace HSEBuildings.UI
         public InfoWindow()
         {
             InitializeComponent();
+            dBConnection();
+            textBox.IsEnabled = false;
+            comboBox.IsEnabled = false;
+        }
+        void dBConnection()
+        {
+            image.Source = new BitmapImage(new Uri("Resources/placeholder.png", UriKind.Relative));
+            comboBox.Items.Add("Библиотека");
+            comboBox.Items.Add("Столовая");
+            comboBox.Items.Add("Диспетчерская");
+            comboBox.Items.Add("Камера хранения");
+        }
+
+        private void checkBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkBox.IsChecked == true)
+            {
+                textBox.IsEnabled = true;
+            }else
+            {
+                textBox.IsEnabled = false;
+            }
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //textBox.Text = comboBox.SelectedItem.ToString();
+        }
+
+        private void checkBoxspecial_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxspecial.IsChecked == true)
+            {
+                comboBox.IsEnabled = true;
+            }
+            else
+            {
+                comboBox.IsEnabled = false;
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            SimpleWindow sw = new SimpleWindow();
+            sw.ShowDialog();
         }
     }
 }
