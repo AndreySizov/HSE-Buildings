@@ -36,7 +36,7 @@ namespace HSEBuildings.UI
             //}
             InitializeComponent();
             System.Timers.Timer t = new System.Timers.Timer(); 
-            t.Interval = 2000;
+            t.Interval = 2500;
             t.Start();
             t.AutoReset = false;
             t.Elapsed += new System.Timers.ElapsedEventHandler(timer_Tick);
