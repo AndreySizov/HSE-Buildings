@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HSEBuildings.Data.ResponseTemplates;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -22,15 +23,31 @@ namespace HSEBuildings.UI
     /// </summary>
     public partial class SimpleWindow : Window
     {
-        public SimpleWindow()
+        int i;
+        List<RoomWay> list;
+        public SimpleWindow(List<RoomWay> spisok)
         {
             InitializeComponent();
-            image.Source = new BitmapImage(new Uri("Resources/1 1.jpg", UriKind.Relative));
+            //i = spisok.Count();
+            list = spisok;
+            image.Source = new BitmapImage(new Uri(String.Format("Resources/{0}",list[0].link), UriKind.Relative));
+            i = 1;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            image.Source = new BitmapImage(new Uri("Resources/1 2.jpg", UriKind.Relative));
+            if (i < list.Count)
+            {
+                image.Source = new BitmapImage(new Uri(String.Format("Resources/{0}", list[i].link), UriKind.Relative));
+                i++;
+            }else
+            {
+                Close();
+            }
+            if (i == list.Count-1)
+            {
+                button.Content = "Конец!";
+            }
         }
     }
 }

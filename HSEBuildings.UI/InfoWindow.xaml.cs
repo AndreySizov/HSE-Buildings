@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HSEBuildings.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,10 +41,13 @@ namespace HSEBuildings.UI
             if (checkBox.IsChecked == true)
             {
                 textBox.IsEnabled = true;
+                checkBoxspecial.IsChecked = false;
+                comboBox.IsEnabled = false;
                 
             }else
             {
                 textBox.IsEnabled = false;
+                textBox.Clear();
             }
         }
 
@@ -57,6 +61,8 @@ namespace HSEBuildings.UI
             if (checkBoxspecial.IsChecked == true)
             {
                 comboBox.IsEnabled = true;
+                checkBox.IsChecked = false;
+                textBox.IsEnabled = false;
             }
             else
             {
@@ -66,9 +72,44 @@ namespace HSEBuildings.UI
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Close();
-            SimpleWindow sw = new SimpleWindow();
-            sw.ShowDialog();
+            string g = "";
+            if (!String.IsNullOrEmpty(textBox.Text))
+            {
+                g = textBox.Text;
+                Repository repo = new Repository();
+                var res2 = repo.getPhotoSet(g);
+                if (res2.Count != 0)
+                {
+                    Close();
+                    SimpleWindow sw = new SimpleWindow(res2);
+                    sw.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Такое место не найдено");
+                }
+            }
+            else if((comboBox.SelectedItem != null)&&(checkBoxspecial.IsChecked != false))
+            {
+                g = comboBox.SelectedItem.ToString();
+                
+                Repository repo = new Repository();
+                var res2 = repo.getPhotoSet(g);
+                if (res2.Count != 0)
+                {
+                    Close();
+                    SimpleWindow sw = new SimpleWindow(res2);
+                    sw.ShowDialog();
+                }else
+                {
+                    MessageBox.Show("Такое место не найдено");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Задайте поле для поиска!");
+            }
         }
     }
 }
