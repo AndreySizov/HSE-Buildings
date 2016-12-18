@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HSEBuildings.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Closed="Window_Closed">
-    <Grid>
-        
+        Title="MainWindow" Height="350" Width="579.077" Closed="Window_Closed" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Cursor="None">
+        <Grid.Effect>
+            <BlurEffect/>
+        </Grid.Effect>
+
     </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="hseformain.jpg"/>
+    </Window.Background>
+
 </Window>

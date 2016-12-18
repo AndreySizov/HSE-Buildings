@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HSEBuildings.UI"
         mc:Ignorable="d"
-        Title="InfoWindow" Height="300" Width="300">
+        Title="InfoWindow" Height="401.427" Width="585.837" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
     </Grid>
 </Window>
