@@ -119,6 +119,7 @@
     <Compile Include="Repository.cs" />
     <Compile Include="ResponseTemplates\Location.cs" />
     <Compile Include="ResponseTemplates\RoomWay.cs" />
+    <Compile Include="ResponseTemplates\Section.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Side.cs" />
     <Compile Include="SideFlor.cs" />

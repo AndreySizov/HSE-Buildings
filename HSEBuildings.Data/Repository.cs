@@ -123,6 +123,17 @@ namespace HSEBuildings.Data
                 return (from item in c.Campus
                         select new Location { Name = item.Name, Latitude = item.Latitude, Longitude = item.Longitude, CampusPhoto = item.CampusPhoto }).ToList();
         }
+
+        public List<Section> getSection()
+        {
+            using (var c = new Context())
+                return (from item in c.Room
+                        join sf in c.SideFlor
+                        on item.SideFlorId equals sf.Id
+                        join side in c.Side
+                        on sf.SideId equals side.Id
+                        select new Section { Name = side.Name }).ToList();
+        }
     }
 }
 
