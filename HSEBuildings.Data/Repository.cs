@@ -132,7 +132,7 @@ namespace HSEBuildings.Data
                         on item.SideFlorId equals sf.Id
                         join side in c.Side
                         on sf.SideId equals side.Id
-                        select new Section { Name = side.Name }).ToList();
+                        select new Section { DirectionId = side.Id }).ToList();
         }
     }
 }

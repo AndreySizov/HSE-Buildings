@@ -8,6 +8,6 @@ namespace HSEBuildings.Data.ResponseTemplates
 {
     public class Section
     {
-        public string Name { get; set; }
+        public int DirectionId { get; set; }
     }
 }
