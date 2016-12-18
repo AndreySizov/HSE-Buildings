@@ -49,35 +49,35 @@ namespace HSEBuildings.UI
             if (i == list.Count - 1)
             {
                 button.Content = "Конец!";
-                if (b)
-                {
-                    if((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
-                    {
-                        MessageBox.Show("Если Вы выбрали левые лифты, то поверните направо. Если Вы выбрали правые лифты, то поверните налево.");
-                    }
-                    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
-                    {
-                        MessageBox.Show("Если Вы выбрали левые лифты, то поверните налево. Если Вы выбрали правые лифты, то поверните направо.");
-                    }
-                }else
-                {
-                    if ((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
-                    {
-                        MessageBox.Show("Поверните налево.");
-                    }
-                    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
-                    {
-                        MessageBox.Show("Поверните направо.");
-                    }
-                }
+                //if (b)
+                //{
+                //    if((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
+                //    {
+                //        MessageBox.Show("Если Вы выбрали левые лифты, то поверните направо. Если Вы выбрали правые лифты, то поверните налево.");
+                //    }
+                //    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
+                //    {
+                //        MessageBox.Show("Если Вы выбрали левые лифты, то поверните налево. Если Вы выбрали правые лифты, то поверните направо.");
+                //    }
+                //}else
+                //{
+                //    if ((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
+                //    {
+                //        MessageBox.Show("Поверните налево.");
+                //    }
+                //    if ((section[0].DirectionId == 2) || (section[0].DirectionId == 4))
+                //    {
+                //        MessageBox.Show("Поверните направо.");
+                //    }
+                //}
 
             }
-            if ((i == 3)&&(b==false))
-            {
-                    MessageBox.Show("Выберите сторону лифтов: левая или правая");
+            //if ((i == 3)&&(b==false))
+            //{
+            //        MessageBox.Show("Выберите сторону лифтов: левая или правая");
 
                 
-            }
+            //}
             if (i < list.Count)
             {
                 image.Source = new BitmapImage(new Uri(String.Format("Resources/{0}", list[i].link), UriKind.Relative));
