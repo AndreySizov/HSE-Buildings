@@ -49,7 +49,7 @@ namespace HSEBuildings.UI
             if (i == list.Count - 1)
             {
                 button.Content = "Конец!";
-                if (b)
+                if (!b)
                 {
                     if((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
                     {
