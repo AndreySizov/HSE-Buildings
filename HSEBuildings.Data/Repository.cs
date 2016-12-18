@@ -101,7 +101,7 @@ namespace HSEBuildings.Data
                        select new Location { Latitude=item.Latitude, Longitude=item.Longitude }).ToList();
         }
 
-        public List<RoomWay> getPhotoSetNum(string roomName)
+        public List<RoomWay> getPhotoSet(string roomName)
         {
             
             using (var c = new Context())
