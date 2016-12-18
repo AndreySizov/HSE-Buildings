@@ -101,12 +101,23 @@ namespace HSEBuildings.Data
                        select new Location { Latitude=item.Latitude, Longitude=item.Longitude };
         }
 
-        //public IEnumerable<RoomWay> getPhotos(string roomName)
-        //{
-        //    using (var c = new Context())
-        //        return from item in c.Room
-        //               where item.Name
-        //}
+        public IEnumerable<RoomWay> getPhotoSetNum(string roomName)
+        {
+            using (var c = new Context())
+                return from item in c.Room
+                          where item.Name == roomName
+                          join sf in c.SideFlor
+                          on item.FlorSideId equals sf.Id
+                          join phs in c.PhotoSet
+                          on sf.PhotoSetNum equals phs.PhotoSetNum
+                          join ph in c.Photo
+                          on phs.PhotoId equals ph.Id
+                          select new RoomWay { link = ph.Link };
+
+
+            
+
+        }
     }
 }
 

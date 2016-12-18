@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HSEBuildings.Data.ResponseTemplates
 {
-    class RoomWay
+    public class RoomWay
     {
         public string link { get; set; }
     }
