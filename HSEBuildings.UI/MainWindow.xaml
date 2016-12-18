@@ -4,16 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HSEBuildings.UI"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="579.077" Closed="Window_Closed" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid Cursor="None">
-        <Grid.Effect>
-            <BlurEffect/>
-        </Grid.Effect>
-
+        <Image
+            gif:ImageBehavior.AnimatedSource="hseloading.gif" Margin="0,102,0,183"/>
     </Grid>
     <Window.Background>
-        <ImageBrush ImageSource="hseformain.jpg"/>
+        <ImageBrush ImageSource="main.jpg"/>
     </Window.Background>
 
 </Window>
