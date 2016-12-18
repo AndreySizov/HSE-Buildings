@@ -24,8 +24,8 @@ namespace HSEBuildings.UI
 
         public MainWindow()
         {
-            //Repository repo = new Repository();
-            
+            Repository repo = new Repository();
+
             //using (var c = new Context()) {
             //    //c.Campus.ToList();
             //    c.Campus.AddRange(repo.Campuses);
@@ -34,6 +34,24 @@ namespace HSEBuildings.UI
             //    c.Photo.AddRange(repo.Photos);
             //    c.SaveChanges();
             //}
+
+            //string room = "505";
+            //var res1 = repo.getLocation(loc);
+            //foreach (var item in res1)
+            //{
+            //    Console.WriteLine(item.Latitude + " " + item.Longitude);
+            //}
+            //var res2 = repo.getPhotoSetNum(room);
+            //foreach (var item in res2)
+            //{
+            //    Console.WriteLine(item.link);
+            //}
+            //var res3 = repo.getAllCampuses();
+            //foreach (var item in res3)
+            //{
+            //    Console.WriteLine(item.Name+" "+item.Longitude + " " +item.Latitude + " " +item.CampusPhoto);
+            //}
+
             InitializeComponent();
             System.Timers.Timer t = new System.Timers.Timer(); 
             t.Interval = 2500;

@@ -104,6 +104,10 @@
     <Compile Include="Migrations\201612181605186_SwapSidesAndFlors.Designer.cs">
       <DependentUpon>201612181605186_SwapSidesAndFlors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612181722360_ILikeStupidMistakes.cs" />
+    <Compile Include="Migrations\201612181722360_ILikeStupidMistakes.Designer.cs">
+      <DependentUpon>201612181722360_ILikeStupidMistakes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="PhotoSet.cs" />
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612181605186_SwapSidesAndFlors.resx">
       <DependentUpon>201612181605186_SwapSidesAndFlors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612181722360_ILikeStupidMistakes.resx">
+      <DependentUpon>201612181722360_ILikeStupidMistakes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EmbeddedResource Include="Buildings.Json" />
