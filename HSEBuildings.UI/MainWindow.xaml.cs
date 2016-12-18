@@ -26,7 +26,8 @@ namespace HSEBuildings.UI
         {
             Repository repo = new Repository();
 
-            //using (var c = new Context()) {
+            //using (var c = new Context())
+            //{
             //    //c.Campus.ToList();
             //    c.Campus.AddRange(repo.Campuses);
             //    c.Flor.AddRange(repo.Flors);
@@ -41,7 +42,7 @@ namespace HSEBuildings.UI
             //{
             //    Console.WriteLine(item.Latitude + " " + item.Longitude);
             //}
-            //var res2 = repo.getPhotoSetNum(room);
+            //var res2 = repo.getPhotoSet(room);
             //foreach (var item in res2)
             //{
             //    Console.WriteLine(item.link);
@@ -49,7 +50,7 @@ namespace HSEBuildings.UI
             //var res3 = repo.getAllCampuses();
             //foreach (var item in res3)
             //{
-            //    Console.WriteLine(item.Name+" "+item.Longitude + " " +item.Latitude + " " +item.CampusPhoto);
+            //    Console.WriteLine(item.Name + " " + item.Longitude + " " + item.Latitude + " " + item.CampusPhoto);
             //}
 
             InitializeComponent();
