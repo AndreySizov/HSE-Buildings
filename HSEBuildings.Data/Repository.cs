@@ -90,7 +90,7 @@ namespace HSEBuildings.Data
         public void GetData()
         {
             
-            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("HSEBuildings.Data/Buildings.Json"));
+            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("HSEBuildings/HSEBuildings.Data/Buildings.Json"));
         }
 
         public IEnumerable<Location> getLocation(string name)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HSEBuildings.Data
 {
-    public class Context :DbContext
+    public class Context : DbContext
     {
         public DbSet<Campus> Campus { get; set; }
         public DbSet<Flor> Flor { get; set; }

@@ -10,5 +10,7 @@ namespace HSEBuildings.Data
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public Campus Campus { get; set; }
+        public int CampusId { get; set; }
     }
 }
