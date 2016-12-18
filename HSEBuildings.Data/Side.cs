@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace HSEBuildings.Data
 {
-    public class Campus
+    public class Side
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public string CampusPhoto { get; set; }
     }
 }

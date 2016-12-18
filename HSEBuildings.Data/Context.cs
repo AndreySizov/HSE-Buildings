@@ -13,6 +13,9 @@ namespace HSEBuildings.Data
         public DbSet<Flor> Flor { get; set; }
         public DbSet<Room> Room { get; set; }
         public DbSet<Photo> Photo { get; set; }
+        public DbSet<Side> Side { get; set; }
+        public DbSet<SideFlor> SideFlor { get; set; }
+        public DbSet<PhotoSet> PhotoSet { get; set; }
 
         public Context() : base("localsql")
         {

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HSEBuildings.Data.ResponseTemplates;
 
 namespace HSEBuildings.Data
 {
@@ -16,6 +17,9 @@ namespace HSEBuildings.Data
             public List<Flor> Flors { get; set; }
             public List<Room> Rooms { get; set; }
             public List<Photo> Photos { get; set; }
+            public List<Side> Sides { get; set; }
+            public List<SideFlor> SideFlors { get; set; }
+            public List<PhotoSet> PhotoSets { get; set; }
         }
 
         DataSet _dataset;
@@ -55,17 +59,54 @@ namespace HSEBuildings.Data
             }
 
         }
-        public Repository()
+
+        public IEnumerable<PhotoSet> PhotoSets
         {
-            _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("../../../HSEBuildings.Data/Buildings.Json"));
+            get
+            {
+                return _dataset.PhotoSets;
+            }
+
         }
 
+        public IEnumerable<Side> Sides
+        {
+            get
+            {
+                return _dataset.Sides;
+            }
+
+        }
+
+        public IEnumerable<SideFlor> SideFlors
+        {
+            get
+            {
+                return _dataset.SideFlors;
+            }
+
+        }
 
         public void GetData()
         {
             
             _dataset = JsonConvert.DeserializeObject<DataSet>(File.ReadAllText("HSEBuildings.Data/Buildings.Json"));
         }
+
+        public IEnumerable<Location> getLocation(string name)
+        {
+            using (var c = new Context())
+                return from item in c.Campus
+                       where item.Name == name
+                       select new Location { Latitude=item.Latitude, Longitude=item.Longitude };
+        }
+
+        //public IEnumerable<RoomWay> getPhotos(string roomName)
+        //{
+        //    using (var c = new Context())
+        //        return from item in c.Room
+        //               where item.Name
+        //}
     }
 }
 

@@ -10,9 +10,8 @@ namespace HSEBuildings.Data
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool Side { get; set; }
-        public Flor Flor { get; set; }
-        public int FlorId { get; set; }
+        public SideFlor SideFlor { get; set; }
+        public int FlorSideId { get; set; }
         
     }
 }

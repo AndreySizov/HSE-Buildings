@@ -18,19 +18,31 @@ namespace HSEBuildings.Data.Migrations
             repo.GetData();
             foreach (var item in repo.Campuses)
             {
-                context.Campus.AddOrUpdate(camp => camp.Name);
+                context.Campus.AddOrUpdate(camp => camp.Name, item);
             }
             foreach (var item in repo.Flors)
             {
-                context.Flor.AddOrUpdate(flor => flor.Number);
+                context.Flor.AddOrUpdate(flor => flor.Number, item);
+            }
+            foreach (var item in repo.Sides)
+            {
+                context.Side.AddOrUpdate(side=> side.Name, item);
+            }
+            foreach (var item in repo.SideFlors)
+            {
+                context.SideFlor.AddOrUpdate(item);
             }
             foreach (var item in repo.Rooms)
             {
-                context.Room.AddOrUpdate(room => room.Name);
+                context.Room.AddOrUpdate(room => room.Name, item);
             }
             foreach (var item in repo.Photos)
             {
-                context.Photo.AddOrUpdate(photo => photo.Link);
+                context.Photo.AddOrUpdate(photo => photo.Link, item);
+            }
+            foreach (var item in repo.PhotoSets)
+            {
+                context.PhotoSet.AddOrUpdate(item);
             }
             //  This method will be called after migrating to the latest version.
 
