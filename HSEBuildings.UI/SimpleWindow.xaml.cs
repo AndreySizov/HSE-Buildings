@@ -36,6 +36,10 @@ namespace HSEBuildings.UI
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            if (i == list.Count - 1)
+            {
+                button.Content = "Конец!";
+            }
             if (i < list.Count)
             {
                 image.Source = new BitmapImage(new Uri(String.Format("Resources/{0}", list[i].link), UriKind.Relative));
@@ -43,10 +47,6 @@ namespace HSEBuildings.UI
             }else
             {
                 Close();
-            }
-            if (i == list.Count-1)
-            {
-                button.Content = "Конец!";
             }
         }
     }
