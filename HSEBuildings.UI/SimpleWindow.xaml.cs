@@ -49,7 +49,7 @@ namespace HSEBuildings.UI
             if (i == list.Count - 1)
             {
                 button.Content = "Конец!";
-                if (!b)
+                if (b==false)
                 {
                     if((section[0].DirectionId == 1) || (section[0].DirectionId == 3))
                     {
@@ -72,7 +72,7 @@ namespace HSEBuildings.UI
                 }
 
             }
-            if ((i == 3)&&b)
+            if ((i == 3)&&(b==false))
             {
                     MessageBox.Show("Выберите сторону лифтов: левая или правая");
 
